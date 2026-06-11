@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kanlungan FC Website
 
-## Getting Started
+A modern, mobile-first website for Kanlungan FC - Cebu's premier youth football club.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **UI Components:** shadcn/ui
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+
+## 📁 Project Structure
+
+```
+kanlungan-fc/
+├── app/
+│   ├── about/              # About page
+│   ├── teams/              # Teams listing page
+│   ├── news/               # News & updates page
+│   ├── schedule/           # Fixtures & training schedule
+│   ├── gallery/            # Photo gallery
+│   ├── contact/            # Contact page
+│   ├── layout.tsx          # Root layout with Navbar & Footer
+│   └── page.tsx            # Home page
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx      # Navigation bar
+│   │   └── Footer.tsx      # Footer component
+│   ├── sections/
+│   │   └── Hero.tsx        # Hero section component
+│   ├── cards/
+│   │   ├── MatchCard.tsx   # Match display card
+│   │   ├── PlayerCard.tsx  # Player profile card
+│   │   └── NewsCard.tsx    # News article card
+│   └── ui/                 # shadcn/ui components
+└── public/
+    └── images/             # Static images
+```
+
+## 🎨 Design
+
+- **Color Scheme:** Black / Yellow / Gold (official club colors from logo)
+- **Typography:** Inter (primary font)
+- **Approach:** Mobile-first responsive design
+- **Style:** Modern, bold, action-oriented
+- **Founded:** 2014
+
+## 🏃 Getting Started
+
+### Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to view the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📄 Pages
 
-To learn more about Next.js, take a look at the following resources:
+- **Home (/)** - Hero, upcoming matches, latest news, CTA
+- **About (/about)** - Club history, mission, vision, values
+- **Teams (/teams)** - Age groups (U8, U10, U12, U16, Adults)
+- **News (/news)** - Latest updates and announcements
+- **Schedule (/schedule)** - Match fixtures, results, training schedule
+- **Gallery (/gallery)** - Photos from matches and events
+- **Contact (/contact)** - Contact form and information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Features Implemented
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+✅ Responsive navigation with mobile menu and logo  
+✅ Hero section with CTA buttons  
+✅ Reusable card components (Match, Player, News)  
+✅ Static page content for all main pages  
+✅ Consistent layout with header and footer  
+✅ Mobile-first responsive design  
+✅ Hover effects and transitions  
+✅ Official club branding (Yellow/Black color scheme with logo)  
 
-## Deploy on Vercel
+## 🔜 Next Steps (Phase 2)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Integrate Sanity CMS for content management
+- [ ] Add dynamic routes for individual team pages
+- [ ] Add dynamic routes for news articles
+- [ ] Implement image uploads and gallery
+- [ ] Add SEO optimization (meta tags, sitemap)
+- [ ] Set up contact form backend
+- [ ] Deploy to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔜 Future Features (Phase 3)
+
+- [ ] Player registration system
+- [ ] Member portal with authentication
+- [ ] Admin dashboard
+- [ ] Training attendance tracking
+- [ ] Live match updates
+- [ ] WhatsApp integration
+- [ ] Sponsor section
+
+## 📦 Dependencies
+
+Key dependencies:
+- `next` - React framework
+- `react` & `react-dom` - UI library
+- `typescript` - Type safety
+- `tailwindcss` - Styling
+- `framer-motion` - Animations
+- `lucide-react` - Icons
+- `class-variance-authority`, `clsx`, `tailwind-merge` - Utility functions
+
+## 👨‍💻 Development
+
+This project uses:
+- Next.js App Router (not Pages Router)
+- TypeScript for type safety
+- Tailwind CSS for styling
+- shadcn/ui for pre-built components
+
+## 📝 Notes
+
+- All pages are currently static with sample data
+- Club logo added to navbar (`/public/images/logo.png`)
+- Official colors: Black, Yellow (#EAB308 / yellow-500), Gold
+- Contact form is frontend-only (needs backend integration)
+- CMS integration recommended for content management
+- Founded in 2014
+
+---
+
+Built with ❤️ for Kanlungan FC

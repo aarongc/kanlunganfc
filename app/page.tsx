@@ -1,65 +1,169 @@
+import Hero from "@/components/sections/Hero";
+import MatchCard from "@/components/cards/MatchCard";
+import NewsCard from "@/components/cards/NewsCard";
+import PlayerCard from "@/components/cards/PlayerCard";
+import AnimatedSection from "@/components/sections/AnimatedSection";
+import StatsCounter from "@/components/sections/StatsCounter";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+      <Hero />
+
+      {/* Stats Bar */}
+      <section className="py-8 bg-black text-white border-y-4 border-yellow-500">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="font-display text-5xl text-yellow-400 mb-2">12+</div>
+              <div className="font-display text-sm uppercase tracking-wider">Years</div>
+            </div>
+            <div>
+              <div className="font-display text-5xl text-yellow-400 mb-2">200+</div>
+              <div className="font-display text-sm uppercase tracking-wider">Players</div>
+            </div>
+            <div>
+              <div className="font-display text-5xl text-yellow-400 mb-2">15</div>
+              <div className="font-display text-sm uppercase tracking-wider">Championships</div>
+            </div>
+            <div>
+              <div className="font-display text-5xl text-yellow-400 mb-2">50+</div>
+              <div className="font-display text-sm uppercase tracking-wider">Matches</div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* About Section */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <AnimatedSection direction="up">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="font-display text-5xl md:text-7xl font-normal mb-8 uppercase tracking-wider">
+                WHO <span className="text-yellow-500">WE ARE</span>
+              </h2>
+              <p className="font-display text-xl md:text-2xl text-gray-700 leading-relaxed mb-12">
+                Kanlungan FC is Cebu's premier youth football club, dedicated to developing champions on and off the field. 
+                Since 2014, we've built a community where young athletes grow through professional coaching, competitive play, 
+                and unwavering support.
+              </p>
+              <Button asChild size="lg" className="font-display bg-black hover:bg-gray-900 text-white text-lg px-12 py-8 h-auto rounded-none uppercase tracking-wider">
+                <Link href="/about">Our Story</Link>
+              </Button>
+            </div>
+          </AnimatedSection>
         </div>
-      </main>
+      </section>
+
+      {/* Teams Section */}
+      <section className="py-32 bg-black text-white">
+        <div className="container mx-auto px-4">
+          <AnimatedSection direction="up">
+            <h2 className="font-display text-5xl md:text-7xl font-normal text-center mb-20 uppercase tracking-wider">
+              OUR <span className="text-yellow-400">TEAMS</span>
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+              {[
+                { name: "U8 Eagles", ages: "Ages 6-8" },
+                { name: "U10 Tigers", ages: "Ages 9-10" },
+                { name: "U12 Lions", ages: "Ages 11-12" },
+                { name: "U16 Warriors", ages: "Ages 13-16" },
+                { name: "Adults", ages: "Ages 17+" },
+              ].map((team, index) => (
+                <AnimatedSection key={team.name} delay={index * 0.1} direction="up">
+                  <Link
+                    href="/teams"
+                    className="block bg-yellow-500 p-8 hover:bg-yellow-400 transition-all duration-300 group"
+                  >
+                    <h3 className="font-display text-2xl md:text-3xl font-normal mb-2 text-black uppercase tracking-wider">
+                      {team.name}
+                    </h3>
+                    <p className="font-display text-black/70">{team.ages}</p>
+                  </Link>
+                </AnimatedSection>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Upcoming Matches Section */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <AnimatedSection direction="up">
+            <h2 className="font-display text-5xl md:text-7xl font-normal text-center mb-20 uppercase tracking-wider">
+              UPCOMING <span className="text-yellow-500">MATCHES</span>
+            </h2>
+          </AnimatedSection>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <AnimatedSection delay={0.1}>
+              <MatchCard
+                homeTeam="Kanlungan FC U12"
+                awayTeam="Cebu United U12"
+                date="June 15, 2026"
+                time="3:00 PM"
+                location="Cebu City Sports Center"
+                status="upcoming"
+              />
+            </AnimatedSection>
+            <AnimatedSection delay={0.2}>
+              <MatchCard
+                homeTeam="Kanlungan FC U16"
+                awayTeam="Mandaue FC U16"
+                date="June 18, 2026"
+                time="5:00 PM"
+                location="Abellana Sports Complex"
+                status="upcoming"
+              />
+            </AnimatedSection>
+            <AnimatedSection delay={0.3}>
+              <MatchCard
+                homeTeam="Kanlungan FC Adults"
+                awayTeam="Lapu-Lapu FC"
+                date="June 20, 2026"
+                time="7:00 PM"
+                location="Cebu City Sports Center"
+                status="upcoming"
+              />
+            </AnimatedSection>
+          </div>
+          
+          <div className="text-center mt-16">
+            <Button asChild size="lg" className="font-display bg-black hover:bg-gray-900 text-white text-lg px-12 py-8 h-auto rounded-none uppercase tracking-wider">
+              <Link href="/schedule">Full Schedule</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-40 bg-yellow-500 text-black">
+        <div className="container mx-auto px-4">
+          <AnimatedSection direction="up">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="font-display text-6xl md:text-8xl font-normal mb-8 uppercase tracking-widest">
+                JOIN THE TEAM
+              </h2>
+              <p className="font-display text-2xl md:text-3xl mb-16">
+                Start Your Football Journey Today
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Button asChild size="lg" className="font-display bg-black hover:bg-gray-900 text-white text-xl px-16 py-10 h-auto rounded-none uppercase tracking-wider shadow-2xl">
+                  <Link href="/contact">Register Now</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="font-display border-4 border-black text-black hover:bg-black hover:text-white text-xl px-16 py-10 h-auto rounded-none uppercase tracking-wider shadow-2xl">
+                  <Link href="/about">Learn More</Link>
+                </Button>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
     </div>
   );
 }
