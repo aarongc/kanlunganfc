@@ -38,8 +38,20 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-32 bg-white relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/gallery/715711673_1012606355057711_2406201888397208618_n.jpg"
+            alt="Kanlungan FC Team"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
           <AnimatedSection direction="up">
             <div className="max-w-5xl mx-auto text-center">
               <h2 className="font-display text-5xl md:text-7xl font-normal mb-8 uppercase tracking-wider">

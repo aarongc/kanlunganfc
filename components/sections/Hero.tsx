@@ -14,7 +14,7 @@ export default function Hero() {
           src="/images/hero-bg.png"
           alt="Kanlungan FC Team"
           fill
-          className="object-cover grayscale"
+          className="object-cover"
           priority
         />
         {/* Dark overlay */}
