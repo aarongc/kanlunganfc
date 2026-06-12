@@ -54,7 +54,7 @@ kanlungan-fc/
 Open **PowerShell** and run:
 
 ```powershell
-cd "$env:USERPROFILE\source\repos"
+cd "$env:USERPROFILE"
 git clone https://github.com/aarongc/kanlunganfc.git
 cd kanlunganfc
 npm install
