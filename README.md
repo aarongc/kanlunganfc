@@ -53,9 +53,11 @@ kanlungan-fc/
 
 ```bash
 npm run dev
+npm run open:repo
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to view the website.
+Run `npm run open:repo` to open the current repository folder (Explorer on Windows, `open` on macOS, `xdg-open` on Linux).
+If your OS opener command is unavailable, the script prints the folder path for manual opening.
 
 ### Build for Production
 

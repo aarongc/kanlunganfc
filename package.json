@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "open:repo": "node scripts/open-repo.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
