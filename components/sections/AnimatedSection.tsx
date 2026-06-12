@@ -35,7 +35,6 @@ export default function AnimatedSection({
       transition: {
         duration: 0.6,
         delay,
-        ease: "easeOut",
       },
     },
   };
