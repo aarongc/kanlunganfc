@@ -49,6 +49,15 @@ kanlungan-fc/
 
 ## 🏃 Getting Started
 
+### Clone the Repository
+
+Run the following commands (for example in **PowerShell** or **Git Bash**):
+
+```bash
+git clone https://github.com/aarongc/kanlunganfc.git
+cd kanlunganfc
+```
+
 ### Development Server
 
 ```bash
