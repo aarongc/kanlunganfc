@@ -56,7 +56,8 @@ npm run dev
 npm run open:app
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to view the website.
+Run `npm run open:app` after starting the dev server to open the app URL in your browser.
+If opening is blocked in your environment, visit [http://localhost:3000](http://localhost:3000) manually.
 
 ### Build for Production
 
