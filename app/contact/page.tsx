@@ -116,7 +116,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="uppercase tracking-wider mb-1">Facebook</h3>
                     <a
-                      href="https://facebook.com"
+                      href="https://www.facebook.com/people/Kanlungan-FC/100089250671484/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-yellow-500 hover:text-yellow-400"

@@ -45,7 +45,7 @@ export default function Footer() {
             <h4 className="font-display mb-4">Connect With Us</h4>
             <div className="space-y-3 font-display">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/people/Kanlungan-FC/100089250671484/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-400 hover:text-yellow-400 transition-colors"
