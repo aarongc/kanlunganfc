@@ -105,7 +105,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="uppercase tracking-wider mb-1">Phone</h3>
-                    <p className="text-gray-700">+63 XXX XXX XXXX</p>
+                    <p className="text-gray-700">0954 227 2602</p>
                   </div>
                 </div>
 
