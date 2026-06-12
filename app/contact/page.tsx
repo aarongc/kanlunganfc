@@ -1,6 +1,7 @@
 import { Mail, ExternalLink, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { clubInfo } from "@/lib/siteData";
 
 export default function ContactPage() {
   return (
@@ -10,7 +11,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <h1 className="text-5xl md:text-7xl uppercase tracking-wider mb-4">Contact Us</h1>
           <p className="text-lg md:text-xl max-w-2xl">
-            Get in touch with Kanlungan FC - we'd love to hear from you
+            Get in touch with {clubInfo.name} - we'd love to hear from you
           </p>
         </div>
       </section>
@@ -95,7 +96,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="uppercase tracking-wider mb-1">Email</h3>
-                    <p className="text-gray-700">kanlunganfc2.0@gmail.com</p>
+                    <p className="text-gray-700">{clubInfo.contact.email}</p>
                   </div>
                 </div>
 
@@ -105,7 +106,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="uppercase tracking-wider mb-1">Phone</h3>
-                    <p className="text-gray-700">0954 227 2602</p>
+                    <p className="text-gray-700">{clubInfo.contact.phone}</p>
                   </div>
                 </div>
 
@@ -116,12 +117,12 @@ export default function ContactPage() {
                   <div>
                     <h3 className="uppercase tracking-wider mb-1">Facebook</h3>
                     <a
-                      href="https://www.facebook.com/people/Kanlungan-FC/100089250671484/"
+                      href={clubInfo.social.facebook.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-yellow-500 hover:text-yellow-400"
                     >
-                      @KanlunganFC
+                      {clubInfo.social.facebook.name}
                     </a>
                   </div>
                 </div>
@@ -133,8 +134,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="uppercase tracking-wider mb-1">Location</h3>
                     <p className="text-gray-700">
-                      Consolacion, Cebu<br />
-                      Philippines
+                      {clubInfo.contact.location.city}, {clubInfo.contact.location.province}<br />
+                      {clubInfo.contact.location.country}
                     </p>
                   </div>
                 </div>
@@ -143,9 +144,9 @@ export default function ContactPage() {
               <div className="mt-8 p-6 bg-yellow-500 rounded-lg">
                 <h3 className="uppercase tracking-wider mb-2">Office Hours</h3>
                 <p className="text-black">
-                  Monday - Friday: 9:00 AM - 6:00 PM<br />
-                  Saturday: 9:00 AM - 12:00 PM<br />
-                  Sunday: Closed
+                  {clubInfo.officeHours.weekdays}<br />
+                  {clubInfo.officeHours.saturday}<br />
+                  {clubInfo.officeHours.sunday}
                 </p>
               </div>
             </div>

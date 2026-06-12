@@ -4,16 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/teams", label: "Teams" },
-  { href: "/news", label: "News" },
-  { href: "/schedule", label: "Schedule" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/contact", label: "Contact" },
-];
+import { navLinks, clubInfo } from "@/lib/siteData";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +16,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center space-x-3">
             <Image
               src="/images/logo.png"
-              alt="Kanlungan FC"
+              alt={clubInfo.name}
               width={50}
               height={50}
               className="object-cover rounded-full"

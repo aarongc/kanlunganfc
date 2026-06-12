@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ExternalLink, Mail, MapPin } from "lucide-react";
+import { clubInfo } from "@/lib/siteData";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
               <span className="text-yellow-400">KANLUNGAN</span> FC
             </h3>
             <p className="font-display text-gray-400">
-              Building champions on and off the field. Cebu's premier youth football club since 2014.
+              {clubInfo.description}. {clubInfo.tagline} since {clubInfo.foundedYear}.
             </p>
           </div>
 
@@ -45,7 +46,7 @@ export default function Footer() {
             <h4 className="font-display mb-4">Connect With Us</h4>
             <div className="space-y-3 font-display">
               <a
-                href="https://www.facebook.com/people/Kanlungan-FC/100089250671484/"
+                href={clubInfo.social.facebook.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-400 hover:text-yellow-400 transition-colors"
@@ -55,18 +56,18 @@ export default function Footer() {
               </a>
               <div className="flex items-center text-gray-400">
                 <Mail className="mr-2" size={20} />
-                kanlunganfc2.0@gmail.com
+                {clubInfo.contact.email}
               </div>
               <div className="flex items-center text-gray-400">
                 <MapPin className="mr-2" size={20} />
-                Consolacion, Cebu, Philippines
+                {clubInfo.contact.location.full}
               </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
-          <p className="font-display">&copy; {new Date().getFullYear()} Kanlungan FC. All rights reserved.</p>
+          <p className="font-display">&copy; {new Date().getFullYear()} {clubInfo.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -7,6 +7,7 @@ import StatsCounter from "@/components/sections/StatsCounter";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { clubInfo } from "@/lib/siteData";
 
 export default function Home() {
   return (
@@ -17,22 +18,12 @@ export default function Home() {
       <section className="py-8 bg-black text-white border-y-4 border-yellow-500">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="font-display text-5xl text-yellow-400 mb-2">12+</div>
-              <div className="font-display text-sm uppercase tracking-wider">Years</div>
-            </div>
-            <div>
-              <div className="font-display text-5xl text-yellow-400 mb-2">200+</div>
-              <div className="font-display text-sm uppercase tracking-wider">Players</div>
-            </div>
-            <div>
-              <div className="font-display text-5xl text-yellow-400 mb-2">15</div>
-              <div className="font-display text-sm uppercase tracking-wider">Championships</div>
-            </div>
-            <div>
-              <div className="font-display text-5xl text-yellow-400 mb-2">50+</div>
-              <div className="font-display text-sm uppercase tracking-wider">Matches</div>
-            </div>
+            {clubInfo.stats.map((stat, index) => (
+              <div key={index}>
+                <div className="font-display text-5xl text-yellow-400 mb-2">{stat.value}</div>
+                <div className="font-display text-sm uppercase tracking-wider">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -58,8 +49,8 @@ export default function Home() {
                 WHO <span className="text-yellow-500">WE ARE</span>
               </h2>
               <p className="font-display text-xl md:text-2xl text-gray-700 leading-relaxed mb-12">
-                Kanlungan FC is Cebu's premier youth football club, dedicated to developing champions on and off the field. 
-                Since 2014, we've built a community where young athletes grow through professional coaching, competitive play, 
+                {clubInfo.name} is {clubInfo.tagline}, dedicated to developing champions on and off the field. 
+                Since {clubInfo.foundedYear}, we've built a community where young athletes grow through professional coaching, competitive play, 
                 and unwavering support.
               </p>
               <Button asChild size="lg" className="font-display bg-black hover:bg-gray-900 text-white text-lg px-12 py-8 h-auto rounded-none uppercase tracking-wider">
@@ -79,13 +70,7 @@ export default function Home() {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
-              {[
-                { name: "U8 Eagles", ages: "Ages 6-8" },
-                { name: "U10 Tigers", ages: "Ages 9-10" },
-                { name: "U12 Lions", ages: "Ages 11-12" },
-                { name: "U16 Warriors", ages: "Ages 13-16" },
-                { name: "Adults", ages: "Ages 17+" },
-              ].map((team, index) => (
+              {clubInfo.teams.map((team, index) => (
                 <AnimatedSection key={team.name} delay={index * 0.1} direction="up">
                   <Link
                     href="/teams"
