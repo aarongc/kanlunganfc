@@ -95,7 +95,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="uppercase tracking-wider mb-1">Email</h3>
-                    <p className="text-gray-700">info@kanlunganfc.com</p>
+                    <p className="text-gray-700">kanlunganfc2.0@gmail.com</p>
                   </div>
                 </div>
 

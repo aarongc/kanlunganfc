@@ -55,7 +55,7 @@ export default function Footer() {
               </a>
               <div className="flex items-center text-gray-400">
                 <Mail className="mr-2" size={20} />
-                info@kanlunganfc.com
+                kanlunganfc2.0@gmail.com
               </div>
               <div className="flex items-center text-gray-400">
                 <MapPin className="mr-2" size={20} />
