@@ -59,7 +59,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-400">
                 <MapPin className="mr-2" size={20} />
-                Cebu City, Philippines
+                Consolacion, Cebu, Philippines
               </div>
             </div>
           </div>

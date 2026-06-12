@@ -133,8 +133,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="uppercase tracking-wider mb-1">Location</h3>
                     <p className="text-gray-700">
-                      Cebu City Sports Center<br />
-                      Cebu City, Cebu<br />
+                      Consolacion, Cebu<br />
                       Philippines
                     </p>
                   </div>
