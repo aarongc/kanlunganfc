@@ -49,7 +49,7 @@ kanlungan-fc/
 
 ## 🏃 Getting Started
 
-### Clone on Windows
+### Clone the Repository (Windows)
 
 In **PowerShell** or **Git Bash**, run:
 
