@@ -53,6 +53,7 @@ kanlungan-fc/
 
 ```bash
 npm run dev
+npm run open:app
 ```
 
 Visit [http://localhost:3000](http://localhost:3000) to view the website.
