@@ -54,10 +54,13 @@ kanlungan-fc/
 ```bash
 npm run dev
 npm run open:app
+npm run open:repo
 ```
 
 Run `npm run open:app` after starting the dev server to open the app URL in your browser.
 If opening is blocked in your environment, visit [http://localhost:3000](http://localhost:3000) manually.
+Run `npm run open:repo` to open the current repository folder (Explorer on Windows, `open` on macOS, `xdg-open` on Linux).
+If your OS opener command is unavailable, the script prints the folder path for manual opening.
 
 ### Build for Production
 

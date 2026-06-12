@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "open:app": "node scripts/open-app.mjs",
+    "open:repo": "node scripts/open-repo.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
