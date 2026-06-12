@@ -51,7 +51,7 @@ kanlungan-fc/
 
 ### Clone the Repository
 
-On **Windows** (using **PowerShell** or **Git Bash**), run:
+Run the following commands (for example in **PowerShell** or **Git Bash**):
 
 ```bash
 git clone https://github.com/aarongc/kanlunganfc.git
