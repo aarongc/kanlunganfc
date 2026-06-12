@@ -49,6 +49,17 @@ kanlungan-fc/
 
 ## 🏃 Getting Started
 
+### Clone Locally (Windows)
+
+Open **PowerShell** and run:
+
+```powershell
+cd C:\path\to\your\projects
+git clone https://github.com/aarongc/kanlunganfc.git
+cd kanlunganfc
+npm install
+```
+
 ### Development Server
 
 ```bash
